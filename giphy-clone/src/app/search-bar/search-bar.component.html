@@ -1,0 +1,22 @@
+<form class="search" [formGroup]="searchForm" (ngSubmit)="onSearch()">
+  <div class="search__input">
+    <input
+      #searchInput
+      type="search"
+      formControlName="search"
+      placeholder="Search images"
+    />
+    <input
+      #textInput
+      type="text"
+      formControlName="text"
+      placeholder="Display text"
+    />
+    <select formControlName="textPosition">
+      <option value="0" selected>on top of image (center top)</option>
+      <option value="1">on top of image (center bottom)</option>
+      <option value="2">below image (center)</option>
+    </select>
+  </div>
+  <button type="submit" class="search__button">Search</button>
+</form>
